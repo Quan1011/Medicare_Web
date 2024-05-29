@@ -8,11 +8,14 @@ import icon03 from '../assets/images/icon03.png'
 import featureImg from '../assets/images/feature-img.png'
 import videoIcon from '../assets/images/video-icon.png'
 import avatarIcon from '../assets/images/avatar-icon.png'
+import faqImg from '../assets/images/faq-img.png'
 import { Link } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 import About from '../components/About/About'
 import ServiceList from '../components/Services/ServiceList'
 import DoctorList from '../components/Doctors/DoctorList'
+import FaqList from '../components/Faq/FaqList'
+import Testimonial from '../components/Testimonial/Testimonial'
 
 
 const Home = () => {
@@ -71,13 +74,14 @@ const Home = () => {
         </div>
       </section>
       {/* hero section end */}
+
       <section>
         <div className="container">
           <div className='lg:w-[470px] mx-auto'>
             <h2 className='heading text-center'>
               Providing the best medical services
             </h2>
-            <p>World-class care for everyone. One health System offers unmatched, expert health care.</p>
+            <p className='text__para text-center'>World-class care for everyone. One health System offers unmatched, expert health care.</p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]'>
             <div className='py-[30px] px-5 '>
@@ -138,7 +142,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <About />
+
       {/* services section */}
       <section>
         <div className="container">
@@ -203,12 +209,13 @@ const Home = () => {
         </div>
       </section>
       {/* feature section end */}
+
       {/* our great doctors */}
       <section>
         <div className="container">
           <div className='xl:w-[470px] mx-auto'>
             <h2 className='heading text-center'>Our great doctors</h2>
-            <p className='text-para text-center'>
+            <p className='text__para text-center'>
               World-class care for everyone. Our health System offers unmatched, expert health care.
             </p>
           </div>
@@ -217,6 +224,35 @@ const Home = () => {
       </section>
       {/* our great doctors end */}
 
+      {/* faq section */}
+      <section>
+        <div className="container">
+          <div className="flex justify-between gap-[50px] lg:gap-0">
+            <div>
+              <img src={faqImg} alt="" />
+            </div>
+            <div className='w-full md:w-1/2'>
+              <h2 className='heading'>Most questions by our beloved patients</h2>
+              <FaqList />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* faq section end */}
+
+      {/* testimonial */}
+      <section>
+        <div className="container">
+          <div className='xl:w-[470px] mx-auto'>
+            <h2 className='heading text-center'>What our patient say</h2>
+            <p className='text__para text-center'>
+              World-class care for everyone. Our health System offers unmatched, expert health care.
+            </p>
+          </div>
+          <Testimonial />
+        </div>
+      </section>
+      {/* testimonial end */}
     </>
   )
 }
