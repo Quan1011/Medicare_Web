@@ -559,17 +559,17 @@ const Profile = ({ doctorData }) => {
   return (
     <div>
       <h2 className="text-headingColor font-bold text-[24px] leading-9 mb-10">
-        Thông Tin Hồ Sơ
+      Profile Information
       </h2>
       <form>
         <div className="mb-5">
-          <p className="form__label">Tên*:</p>
+          <p className="form__label">Name*:</p>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            placeholder="Tên"
+            placeholder="Name"
             className="form__input"
           />
         </div>
@@ -588,24 +588,24 @@ const Profile = ({ doctorData }) => {
           />
         </div>
         <div className="mb-5">
-          <p className="form__label">Số Điện Thoại*:</p>
+          <p className="form__label">Phone*:</p>
           <input
             type="number"
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder="Số Điện Thoại"
+            placeholder="Phone"
             className="form__input"
           />
         </div>
         <div className="mb-5">
-          <p className="form__label">Giới Thiệu*:</p>
+          <p className="form__label">Bio*:</p>
           <input
             type="text"
             name="bio"
             value={formData.bio}
             onChange={handleInputChange}
-            placeholder="Giới Thiệu"
+            placeholder="Bio"
             className="form__input"
             maxLength={100}
           />
@@ -613,35 +613,35 @@ const Profile = ({ doctorData }) => {
         <div className="mb-5">
           <div className="grid grid-cols-3 gap-5 mb-[30px]">
             <div>
-              <p className="form__label">Giới Tính*</p>
+              <p className="form__label">Gender*</p>
               <select
                 name="gender"
                 value={formData.gender}
                 onChange={handleInputChange}
                 className="form__input py-3.5"
               >
-                <option value="">Chọn</option>
-                <option value="male">Nam</option>
-                <option value="female">Nữ</option>
-                <option value="other">Khác</option>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
               </select>
             </div>
             <div>
-              <p className="form__label">Chuyên Môn*</p>
+              <p className="form__label">Specialization*</p>
               <select
                 name="specialization"
                 value={formData.specialization}
                 onChange={handleInputChange}
                 className="form__input py-3.5"
               >
-                <option value="">Chọn</option>
-                <option value="surgeon">Bác sĩ phẫu thuật</option>
-                <option value="neurologist">Bác sĩ thần kinh</option>
-                <option value="dermatologist">Bác sĩ da liễu</option>
+                <option value="">Select</option>
+                <option value="surgeon">Surgeon</option>
+                <option value="neurologist">Neurologist</option>
+                <option value="dermatologist">Dermatologist</option>
               </select>
             </div>
             <div>
-              <p className="form__label">Giá Vé*</p>
+              <p className="form__label">Ticket Price*</p>
               <input
                 type="number"
                 placeholder="100"
@@ -654,13 +654,13 @@ const Profile = ({ doctorData }) => {
           </div>
         </div>
         <div className="mb-5">
-          <p className="form__label">Bằng Cấp*</p>
+          <p className="form__label">Qualifications*</p>
           {formData.qualifications?.map((item, index) => (
             <div key={index}>
               <div>
                 <div className="grid grid-cols-2 gap-5">
                   <div>
-                    <p className="form__label">Ngày Bắt Đầu*</p>
+                    <p className="form__label">Starting Date*</p>
                     <input
                       type="date"
                       name="startingDate"
@@ -670,7 +670,7 @@ const Profile = ({ doctorData }) => {
                     />
                   </div>
                   <div>
-                    <p className="form__label">Ngày Kết Thúc*</p>
+                    <p className="form__label">Ending Date*</p>
                     <input
                       type="date"
                       name="endingDate"
@@ -682,7 +682,7 @@ const Profile = ({ doctorData }) => {
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <div>
-                    <p className="form__label">Bằng Cấp*</p>
+                    <p className="form__label">Degree*</p>
                     <input
                       type="text"
                       name="degree"
@@ -692,7 +692,7 @@ const Profile = ({ doctorData }) => {
                     />
                   </div>
                   <div>
-                    <p className="form__label">Trường Đại Học*</p>
+                    <p className="form__label">University*</p>
                     <input
                       type="text"
                       name="university"
@@ -715,17 +715,17 @@ const Profile = ({ doctorData }) => {
             onClick={addQualification}
             className="bg-[#000] py-2 px-5 rounded text-white h-fit cursor-pointer "
           >
-            Thêm Bằng Cấp
+            Add Qualification
           </button>
         </div>
         <div className="mb-5">
-          <p className="form__label">Kinh Nghiệm*</p>
+          <p className="form__label">Experiences*</p>
           {formData.experiences?.map((item, index) => (
             <div key={index}>
               <div>
                 <div className="grid grid-cols-2 gap-5">
                   <div>
-                    <p className="form__label">Ngày Bắt Đầu*</p>
+                    <p className="form__label">Starting Date*</p>
                     <input
                       type="date"
                       name="startingDate"
@@ -735,7 +735,7 @@ const Profile = ({ doctorData }) => {
                     />
                   </div>
                   <div>
-                    <p className="form__label">Ngày Kết Thúc*</p>
+                    <p className="form__label">Ending Date*</p>
                     <input
                       type="date"
                       name="endingDate"
@@ -747,7 +747,7 @@ const Profile = ({ doctorData }) => {
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <div>
-                    <p className="form__label">Chức Vụ*</p>
+                    <p className="form__label">Position*</p>
                     <input
                       type="text"
                       name="position"
@@ -757,7 +757,7 @@ const Profile = ({ doctorData }) => {
                     />
                   </div>
                   <div>
-                    <p className="form__label">Bệnh Viện*</p>
+                    <p className="form__label">Hospital*</p>
                     <input
                       type="text"
                       name="hospital"
@@ -780,35 +780,35 @@ const Profile = ({ doctorData }) => {
             onClick={addExperience}
             className="bg-[#000] py-2 px-5 rounded text-white h-fit cursor-pointer "
           >
-            Thêm Kinh Nghiệm
+            Add Experiences
           </button>
         </div>
         <div className="mb-5">
-          <p className="form__label">Thời Gian Khám*</p>
+          <p className="form__label">Time Slots*</p>
           {formData.timeSlots?.map((item, index) => (
             <div key={index}>
               <div>
                 <div className="grid grid-cols-2 md:grid-cols-4 mb-[30px] gap-5">
                   <div>
-                    <p className="form__label">Ngày*</p>
+                    <p className="form__label">Day*</p>
                     <select
                       name="day"
                       value={item.day}
                       className="form__input py-3.5"
                       onChange={(e) => handleTimeSlotChange(e, index)}
                     >
-                      <option value="">Chọn</option>
-                      <option value="monday">Thứ Hai</option>
-                      <option value="tuesday">Thứ Ba</option>
-                      <option value="wednesday">Thứ Tư</option>
-                      <option value="thursday">Thứ Năm</option>
-                      <option value="friday">Thứ Sáu</option>
-                      <option value="saturday">Thứ Bảy</option>
-                      <option value="sunday">Chủ Nhật</option>
+                      <option value="">Select</option>
+                      <option value="monday">Monday</option>
+                      <option value="tuesday">Tuesday</option>
+                      <option value="wednesday">Wednesday</option>
+                      <option value="thursday">Thursday</option>
+                      <option value="friday">Friday</option>
+                      <option value="saturday">Saturday</option>
+                      <option value="sunday">Sunday</option>
                     </select>
                   </div>
                   <div>
-                    <p className="form__label">Giờ Bắt Đầu*</p>
+                    <p className="form__label">Starting Time*</p>
                     <input
                       type="time"
                       name="startingTime"
@@ -818,7 +818,7 @@ const Profile = ({ doctorData }) => {
                     />
                   </div>
                   <div>
-                    <p className="form__label">Giờ Kết Thúc*</p>
+                    <p className="form__label">Ending Time*</p>
                     <input
                       type="time"
                       name="endingTime"
@@ -843,11 +843,11 @@ const Profile = ({ doctorData }) => {
             onClick={addTimeSlot}
             className="bg-[#000] py-2 px-5 rounded text-white h-fit cursor-pointer "
           >
-            Thêm Thời Gian Khám
+            Add TimeSlot
           </button>
         </div>
         <div className="mb-5">
-          <p className="form__label">Về Bản Thân*</p>
+          <p className="form__label">About*</p>
           <textarea
             name="about"
             rows={5}
@@ -882,7 +882,7 @@ const Profile = ({ doctorData }) => {
                     py-[0.375rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor 
                     font-semibold rounded-lg truncate cursor-pointer"
             >
-              Tải Ảnh Lên
+              Upload Photo
             </label>
           </div>
         </div>
@@ -892,7 +892,7 @@ const Profile = ({ doctorData }) => {
             onClick={updateProfileHandler}
             className="bg-primaryColor text-white text-[18px] leading-[30px] w-full py-3 px-4 rounded-lg"
           >
-            Cập Nhật Hồ Sơ
+            Update Profile
           </button>
         </div>
       </form>
